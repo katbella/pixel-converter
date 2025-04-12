@@ -1,0 +1,52 @@
+// @see - https://www.electron.build/configuration/configuration
+{
+  "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
+  "appId": "YourAppID",
+  "asar": true,
+  "productName": "Pixel File Converter",
+  "directories": {
+    "output": "release/${version}"
+  },
+  "files": [
+    "dist/**/*",
+    "dist-electron/**/*",
+    "package.json"
+  ],
+  "asarUnpack": [
+    "node_modules/sharp/**",
+    "node_modules/@img/**",
+    "dist-electron/preload.mjs"
+  ],
+  "mac": {
+    "target": {
+      "target": "dmg",
+      "arch": ["arm64"]
+    },
+    "extraResources": [
+      {
+        "from": "node_modules/@img/sharp-libvips-darwin-arm64/lib/",
+        "to": "lib",
+        "filter": ["**/*"]
+      }
+    ]
+  },
+  win: {
+    target: [
+      {
+        target: "nsis",
+        arch: ["x64"],
+      },
+    ],
+    artifactName: "${productName}-Windows-${version}-Setup.${ext}",
+  },
+  nsis: {
+    oneClick: false,
+    perMachine: false,
+    allowToChangeInstallationDirectory: true,
+    deleteAppDataOnUninstall: false,
+  },
+  linux: {
+    target: ["AppImage"],
+    artifactName: "${productName}-Linux-${version}.${ext}",
+  },
+}
