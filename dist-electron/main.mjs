@@ -6741,17 +6741,19 @@ const VITE_PUBLIC = VITE_DEV_SERVER_URL ? path.join(APP_ROOT, "public") : RENDER
 let win;
 function createWindow() {
   win = new BrowserWindow({
-    icon: path.join(VITE_PUBLIC, "electron-vite.svg"),
+    icon: path.join(VITE_PUBLIC, "icon.png"),
     webPreferences: {
       preload: path.join(MAIN_DIST, "preload.mjs"),
       contextIsolation: true,
-      nodeIntegration: true
+      nodeIntegration: true,
+      devTools: !app.isPackaged
     },
     resizable: true,
     minWidth: 400,
     minHeight: 600,
     center: true
   });
+  win.removeMenu();
   win.webContents.on("did-finish-load", () => {
     win == null ? void 0 : win.webContents.send("main-process-message", (/* @__PURE__ */ new Date()).toLocaleString());
   });
@@ -6772,6 +6774,7 @@ app.on("activate", () => {
     createWindow();
   }
 });
+app.setName("Pixel Converter");
 app.whenReady().then(createWindow);
 function getUniqueOutputPath(baseDir, baseName, ext) {
   let candidate = path.join(baseDir, `${baseName}.${ext}`);

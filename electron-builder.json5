@@ -1,36 +1,34 @@
 // @see - https://www.electron.build/configuration/configuration
 {
-  "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
-  "appId": "YourAppID",
-  "asar": true,
-  "productName": "Pixel File Converter",
-  "directories": {
-    "output": "release/${version}"
+  $schema: "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
+  appId: "YourAppID",
+  asar: true,
+  productName: "Pixel Converter",
+  directories: {
+    output: "release/${version}",
   },
-  "files": [
-    "dist/**/*",
-    "dist-electron/**/*",
-    "package.json"
-  ],
-  "asarUnpack": [
+  files: ["dist/**/*", "dist-electron/**/*", "package.json", "build/"],
+  asarUnpack: [
     "node_modules/sharp/**",
     "node_modules/@img/**",
-    "dist-electron/preload.mjs"
+    "dist-electron/preload.mjs",
   ],
-  "mac": {
-    "target": {
-      "target": "dmg",
-      "arch": ["arm64"]
+  mac: {
+    icon: 'build/pixel_converter.icns',
+    target: {
+      target: "dmg",
+      arch: ["arm64"],
     },
-    "extraResources": [
+    extraResources: [
       {
-        "from": "node_modules/@img/sharp-libvips-darwin-arm64/lib/",
-        "to": "lib",
-        "filter": ["**/*"]
-      }
-    ]
+        from: "node_modules/@img/sharp-libvips-darwin-arm64/lib/",
+        to: "lib",
+        filter: ["**/*"],
+      },
+    ],
   },
   win: {
+    icon: 'build/pixel_converter.ico',
     target: [
       {
         target: "nsis",
@@ -44,6 +42,9 @@
     perMachine: false,
     allowToChangeInstallationDirectory: true,
     deleteAppDataOnUninstall: false,
+    "shortcutName": "Pixel Converter",
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
   },
   linux: {
     target: ["AppImage"],

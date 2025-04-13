@@ -1,12 +1,13 @@
 {
   "name": "pixel-converter",
+  "author": "Kat Bella",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "main": "dist-electron/main.mjs",
   "scripts": {
     "dev": "vite",
-    "rebuild": "node rebuild.js",
+    "rebuild": "node scripts/rebuild.js",
     "build": "tsc && vite build && electron-builder",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",

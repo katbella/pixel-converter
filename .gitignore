@@ -7,19 +7,57 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Runtime
+node_modules/
 *.local
+.env*
+.release-it.json
+
+# Build outputs
+dist/
+dist-electron/
+dist-ssr/
+out/
 release/
 
-# Editor directories and files
+# TypeScript + Vite
+*.tsbuildinfo
+*.map
+*.d.ts
+*.js
+*.jsx
+*.mjs
+*.cjs
+
+# Cache
+.cache/
+.vite/
+tmp/
+temp/
+
+# macOS + system
+.DS_Store
+
+# JetBrains IDEs
+.idea/
+
+# VSCode
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+
+# Windows-specific
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Installer junk
+__MACOSX/
+*.dmg
+*.exe
+*.pkg
+*.app
+
+# Test coverage
+coverage/

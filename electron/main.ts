@@ -32,17 +32,20 @@ let win: BrowserWindow | null;
 
 function createWindow() {
   win = new BrowserWindow({
-    icon: path.join(VITE_PUBLIC, "electron-vite.svg"),
+    icon: path.join(VITE_PUBLIC, "icon.png"),
     webPreferences: {
       preload: path.join(MAIN_DIST, "preload.mjs"),
       contextIsolation: true,
       nodeIntegration: true,
+      devTools: !app.isPackaged,
     },
     resizable: true,
     minWidth: 400,
     minHeight: 600,
     center: true,
   });
+
+  win.removeMenu();
 
   // Test active push message to Renderer-process.
   win.webContents.on("did-finish-load", () => {
@@ -74,6 +77,8 @@ app.on("activate", () => {
     createWindow();
   }
 });
+
+app.setName("Pixel Converter");
 
 app.whenReady().then(createWindow);
 
