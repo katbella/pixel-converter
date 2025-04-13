@@ -34,7 +34,7 @@ module.exports = async function (context) {
   for (const location of copyLocations) {
     await fs.ensureDir(location);
     await fs.copy(libvipsPath, location);
-    console.log(`✅ Copied libvips libraries to ${location}`);
+    console.log(`Copied libvips libraries to ${location}`);
   }
 
   // Create symlinks for compatibility

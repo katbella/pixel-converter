@@ -58,5 +58,10 @@ I created this app because I needed a simple and fast image format converter for
 
 If you find it useful, [consider buying me a coffee ☕️](https://www.buymeacoffee.com/pixelator).
 
+## Roadmap
+- i18n and l10n
+- Add more formats
+- Add more options (quality, etc.)
+
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

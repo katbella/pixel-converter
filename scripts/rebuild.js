@@ -12,9 +12,9 @@ async function rebuildSharp() {
       arch: "arm64",
       platform: "darwin",
     });
-    console.log("✅ Sharp rebuild complete");
+    console.log("Sharp rebuild complete");
   } catch (err) {
-    console.error("❌ Sharp rebuild failed:", err);
+    console.error("Sharp rebuild failed:", err);
     process.exit(1);
   }
 }
