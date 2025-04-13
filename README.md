@@ -35,7 +35,7 @@ A simple and fast image format converter for macOS and Windows.
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/yourusername/pixel-converter.git
+git clone https://github.com/katbella/pixel-converter.git
 cd pixel-converter
 npm install
 ```
