@@ -29,6 +29,11 @@ release/
 *.mjs
 *.cjs
 
+# EXCEPT: Tailwind config and any hand-written scripts
+!tailwind.config.js
+!postcss.config.js
+!scripts/
+
 # Cache
 .cache/
 .vite/
