@@ -1,30 +1,61 @@
-# React + TypeScript + Vite
+<img src="./public/icon.png" alt="Pixel Converter icon" width="64" align="left" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Pixel Converter
 
-Currently, two official plugins are available:
+A simple and fast image format converter for macOS and Windows.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## ✨ Features
 
-- Configure the top-level `parserOptions` property like this:
+- 🖼️ Drag and drop image conversion (multiple files supported)
+- 🔄 Convert to JPG, PNG, WebP, AVIF, TIFF, or GIF
+- 🗂️ Choose your output folder
+- 📂 Optionally open folder after conversion
+- 💅 **No ads, no tracking, no internet connection required**
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
+---
+
+## 🧪 Supported Input Formats
+
+- `.jpg`, `.jpeg`
+- `.png`
+- `.webp`
+- `.avif`
+- `.tiff`, `.tif`
+- `.gif`
+- `.heic`, `.heif` 
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone and install
+
+```bash
+git clone https://github.com/yourusername/pixel-converter.git
+cd pixel-converter
+npm install
+```
+### 2. Start in dev mode
+
+```bash
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 3. Build the app
+
+This will create the releases folder with the app for macOS and Windows.
+
+```bash
+npm run build
+```
+
+## 🔥 Motivation
+I created this app because I needed a simple and fast image format converter for my own use (mostly for .HEICs). I couldn't find one that met my needs that wasn't online or littered with ads and tracking, so I decided to build it myself.
+
+If you find it useful, [consider buying me a coffee ☕️](https://www.buymeacoffee.com/pixelator).
+
+## 📝 License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

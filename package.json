@@ -1,6 +1,8 @@
 {
   "name": "pixel-converter",
   "author": "Kat Bella",
+  "license": "MIT",
+  "description": "A simple and fast image format converter for macOS and Windows.",
   "private": true,
   "version": "1.0.0",
   "type": "module",
