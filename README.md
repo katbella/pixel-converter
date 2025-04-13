@@ -7,17 +7,18 @@ A simple and fast image format converter for macOS and Windows.
 
 ---
 
-## ✨ Features
+## Features
 
-- 🖼️ Drag and drop image conversion (multiple files supported)
-- 🔄 Convert to JPG, PNG, WebP, AVIF, TIFF, or GIF
-- 🗂️ Choose your output folder
-- 📂 Optionally open folder after conversion
-- 💅 **No ads, no tracking, no internet connection required**
+- Drag and drop image conversion (multiple files supported)
+- Convert to JPG, PNG, WebP, AVIF, TIFF, or GIF
+- Choose your output folder
+- Optionally open folder after conversion
+- **No ads, no tracking, no internet connection required**
+- Open source and free!
 
 ---
 
-## 🧪 Supported Input Formats
+## Supported Input Formats
 
 - `.jpg`, `.jpeg`
 - `.png`
@@ -29,7 +30,7 @@ A simple and fast image format converter for macOS and Windows.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone and install
 
@@ -52,10 +53,10 @@ This will create the releases folder with the app for macOS and Windows.
 npm run build
 ```
 
-## 🔥 Motivation
+## Motivation
 I created this app because I needed a simple and fast image format converter for my own use (mostly for .HEICs). I couldn't find one that met my needs that wasn't online or littered with ads and tracking, so I decided to build it myself.
 
 If you find it useful, [consider buying me a coffee ☕️](https://www.buymeacoffee.com/pixelator).
 
-## 📝 License
+## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
