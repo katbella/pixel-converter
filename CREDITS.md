@@ -13,4 +13,4 @@ Pixel Converter was built using the following open source technologies:
 Pixel Converter redistributes the `sharp` library in its compiled application.  
 In accordance with the Apache License 2.0, the license text is included at:
 
-[`LICENSES/sharp-LICENSE.txt`](./LICENSES/sharp-LICENSE.txt)
+[`LICENSES/sharp-LICENSE`](./licenses/sharp-LICENSE)
