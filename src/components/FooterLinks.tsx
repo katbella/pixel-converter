@@ -20,7 +20,7 @@ const FooterLinks: React.FC<FooterLinksProps> = ({ setShowAbout }) => {
             "https://buymeacoffee.com/pixelator",
           )
         }
-        className="text-cyan-400 hover:underline"
+        className="text-cyan-500 hover:underline"
       >
         Buy me a coffee
       </button>
