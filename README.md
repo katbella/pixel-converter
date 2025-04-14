@@ -67,4 +67,4 @@ If you find it useful, [consider buying me a coffee ☕️](https://www.buymeaco
 This project is licensed under the MIT License. See the [LICENSE](licenses/LICENSE) file for details.
 
 ## Credits
-See [CREDITS.md](./CREDITS.md) for a full list of technologies and third-party licenses.
+See [CREDITS](./CREDITS.md) for a full list of technologies and third-party licenses.
