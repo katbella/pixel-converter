@@ -28,14 +28,16 @@
     ],
   },
   win: {
-    icon: 'build/icon.ico',
+    icon: "build/icon.ico",
     target: [
       {
         target: "nsis",
-        arch: ["x64"],
-      },
+        arch: ["x64"]
+      }
     ],
-    artifactName: "${productName}-Windows-${version}-Setup.${ext}",
+    signAndEditExecutable: false,
+    verifyUpdateCodeSignature: false,
+    artifactName: "${productName}-Windows-${version}-Setup.${ext}"
   },
   nsis: {
     deleteAppDataOnUninstall: false,
@@ -44,7 +46,8 @@
     allowToChangeInstallationDirectory: true,
     createDesktopShortcut: true,
     createStartMenuShortcut: true,
-    shortcutName: "Pixel Converter"
+    shortcutName: "Pixel Converter",
+    menuCategory: true,
   },
   linux: {
     target: ["AppImage"],

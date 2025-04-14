@@ -32,7 +32,9 @@ let win: BrowserWindow | null;
 
 function createWindow() {
   win = new BrowserWindow({
-    icon: path.join(VITE_PUBLIC, "icon.png"),
+    icon: app.isPackaged
+        ? path.join(process.resourcesPath, "icon.ico")
+        : path.join(VITE_PUBLIC, "icon.png"),
     webPreferences: {
       preload: path.join(MAIN_DIST, "preload.mjs"),
       contextIsolation: true,
