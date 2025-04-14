@@ -20,13 +20,13 @@ const ConversionOptions: React.FC<ConversionOptionsProps> = ({
   supportedFormats,
 }) => {
   return (
-    <div className="space-y-2 text-sm">
+    <div className="space-y-2 text-sm text-neutral-900 dark:text-white">
       <div className="flex justify-between items-center">
         <span>Output format</span>
         <select
           value={outputFormat}
           onChange={(e) => setOutputFormat(e.target.value)}
-          className="bg-neutral-800 text-white border border-neutral-600 rounded px-2 py-1"
+          className="bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white border border-neutral-300 dark:border-neutral-600 rounded px-2 py-1"
         >
           {supportedFormats.map((format) => (
             <option key={format} value={format}>
@@ -40,7 +40,7 @@ const ConversionOptions: React.FC<ConversionOptionsProps> = ({
         <div className="flex justify-between items-center">
           <span>Output folder</span>
           <button
-            className="text-cyan-400 hover:underline"
+            className="text-cyan-600 dark:text-cyan-400 hover:underline"
             onClick={async () => {
               const selected = await window.ipcRenderer.invoke(
                 "select-output-folder",
@@ -54,7 +54,7 @@ const ConversionOptions: React.FC<ConversionOptionsProps> = ({
           </button>
         </div>
         {outputDir && (
-          <div className="mt-1 text-xs text-neutral-300 truncate">
+          <div className="mt-1 text-xs text-neutral-600 dark:text-neutral-300 truncate">
             {outputDir}
           </div>
         )}
