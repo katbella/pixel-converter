@@ -99,9 +99,9 @@ function App() {
   }, []);
 
   return (
-    <div className="w-[400px] mx-auto bg-neutral-900 text-white p-6 space-y-4">
+    <div className="w-[400px] mx-auto bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white p-6 space-y-4">
       <h1 className="text-2xl font-semibold text-center">Pixel Converter</h1>
-      <p className="text-center text-neutral-400 text-sm">
+      <p className="text-center text-neutral-600 dark:text-neutral-400 text-sm">
         Drag and drop images here to convert them.
       </p>
 
