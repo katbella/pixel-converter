@@ -14,7 +14,7 @@
     "dist-electron/preload.mjs",
   ],
   mac: {
-    icon: 'build/pixel_converter.icns',
+    icon: 'build/icon.icns',
     target: {
       target: "dmg",
       arch: ["arm64"],
@@ -28,7 +28,7 @@
     ],
   },
   win: {
-    icon: 'build/pixel_converter.ico',
+    icon: 'build/icon.ico',
     target: [
       {
         target: "nsis",
@@ -38,13 +38,13 @@
     artifactName: "${productName}-Windows-${version}-Setup.${ext}",
   },
   nsis: {
-    oneClick: false,
-    perMachine: false,
-    allowToChangeInstallationDirectory: true,
     deleteAppDataOnUninstall: false,
-    "shortcutName": "Pixel Converter",
-    "createDesktopShortcut": true,
-    "createStartMenuShortcut": true
+    oneClick: false,
+    perMachine: true,
+    allowToChangeInstallationDirectory: true,
+    createDesktopShortcut: true,
+    createStartMenuShortcut: true,
+    shortcutName: "Pixel Converter"
   },
   linux: {
     target: ["AppImage"],
