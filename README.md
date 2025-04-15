@@ -1,6 +1,6 @@
 <img src="./public/icon.png" alt="Pixel Converter icon" width="64" align="left" />
 
-# Pixel Converter
+# [Pixel Converter](https://pixel-converter.app/)
 
 A simple and fast image format converter for macOS and Windows.
 
