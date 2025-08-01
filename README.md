@@ -56,8 +56,6 @@ npm run build
 ## Motivation
 I created this app because I needed a simple and fast image format converter for my own use (mostly for .HEICs). I couldn't find one that met my needs that wasn't online or littered with ads and tracking, so I decided to build it myself.
 
-If you find it useful, [consider buying me a coffee ☕️](https://www.buymeacoffee.com/pixelator).
-
 ## Roadmap
 - i18n and l10n
 - Add more formats
