@@ -53,7 +53,7 @@ function App() {
   const handleConvert = async () => {
     if (!files.length) return;
 
-    const paths = files.map((f) => f.path);
+    const paths = files.map((f) => window.electronAPI.getPathForFile(f));
 
     const result = await window.ipcRenderer.invoke("convert-images", {
       paths,

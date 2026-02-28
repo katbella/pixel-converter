@@ -120,7 +120,7 @@ ipcMain.handle(
 
         if (ext === ".heic" || ext === ".heif") {
           const converted = await heicConvert({
-            buffer,
+            buffer: buffer as unknown as ArrayBuffer,
             format: "JPEG",
             quality: 1,
           });

@@ -1,11 +1,14 @@
-const { rebuild } = require("electron-rebuild");
-const path = require("path");
+import { rebuild } from "electron-rebuild";
+import { createRequire } from "node:module";
+
+const require = createRequire(import.meta.url);
+const electronVersion = require("electron/package.json").version;
 
 async function rebuildSharp() {
   try {
     await rebuild({
       buildPath: process.cwd(),
-      electronVersion: "30.5.1",
+      electronVersion,
       force: true,
       types: ["prod", "optional"],
       onlyModules: ["sharp"],

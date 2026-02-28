@@ -13,17 +13,6 @@ const FooterLinks: React.FC<FooterLinksProps> = ({ setShowAbout }) => {
       >
         About
       </button>
-      <button
-        onClick={() =>
-          window.ipcRenderer.invoke(
-            "open-external-url",
-            "https://buymeacoffee.com/pixelator",
-          )
-        }
-        className="text-cyan-500 hover:underline"
-      >
-        Buy me a coffee
-      </button>
     </div>
   );
 };

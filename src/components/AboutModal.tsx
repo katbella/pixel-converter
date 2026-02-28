@@ -21,7 +21,7 @@ const AboutModal: React.FC<AboutModalProps> = ({ onClose }) => {
           About
         </h2>
         <p className="text-sm text-neutral-600 dark:text-neutral-300">
-          Version 1.0.0
+          Version 1.0.1
         </p>
         <p className="text-sm text-neutral-600 dark:text-neutral-300">
           Pixel Converter is a lightweight image converter. Drop images, choose
