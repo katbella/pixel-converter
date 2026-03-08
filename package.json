@@ -22,7 +22,7 @@
     "sharp": "^0.34.5"
   },
   "overrides": {
-    "tar": "^7.5.9",
+    "tar": "^7.5.10",
     "cacache": "^20.0.3",
     "node-gyp": "^12.2.0",
     "make-fetch-happen": "^15.0.4"

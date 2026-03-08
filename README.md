@@ -13,7 +13,7 @@ A simple and fast image format converter for macOS and Windows.
 - Convert to JPG, PNG, WebP, AVIF, TIFF, or GIF
 - Choose your output folder
 - Optionally open folder after conversion
-- **No ads, no tracking, no internet connection required**
+- No ads, no tracking, no internet connection required
 - Open source and free!
 
 ---
