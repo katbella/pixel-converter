@@ -9,6 +9,7 @@ lerna-debug.log*
 
 # Runtime
 node_modules/
+.claude/
 *.local
 .env*
 .release-it.json

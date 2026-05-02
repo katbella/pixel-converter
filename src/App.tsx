@@ -10,6 +10,8 @@ import AboutModal from "./components/AboutModal";
 
 const SUPPORTED_OUTPUTS = ["jpg", "png", "webp", "avif", "tiff", "gif"];
 
+const getFilePath = (file: File) => window.electronAPI.getPathForFile(file);
+
 function App() {
   const [files, setFiles] = useState<File[]>([]);
   const [outputFormat, setOutputFormat] = useState<string>("jpg");
@@ -37,14 +39,16 @@ function App() {
       ".heif",
     ]);
 
-    const existingPaths = new Set(current.map((f) => f.path));
+    const existingPaths = new Set(current.map(getFilePath));
 
     return [
       ...current,
       ...incoming.filter((f) => {
         const ext = f.name.toLowerCase().split(".").pop();
         return (
-          ext && allowedExtensions.has(`.${ext}`) && !existingPaths.has(f.path)
+          ext &&
+          allowedExtensions.has(`.${ext}`) &&
+          !existingPaths.has(getFilePath(f))
         );
       }),
     ];
@@ -53,7 +57,7 @@ function App() {
   const handleConvert = async () => {
     if (!files.length) return;
 
-    const paths = files.map((f) => window.electronAPI.getPathForFile(f));
+    const paths = files.map(getFilePath);
 
     const result = await window.ipcRenderer.invoke("convert-images", {
       paths,

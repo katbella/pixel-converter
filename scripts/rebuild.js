@@ -1,4 +1,4 @@
-import { rebuild } from "electron-rebuild";
+import { rebuild } from "@electron/rebuild";
 import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
